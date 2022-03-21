@@ -66,7 +66,11 @@ class Guess{
                 }
             }
         }
+        this.styleAsSubmitted();
         return true;
+    }
+    styleAsSubmitted(){
+        //change colors according to guessedStatus
     }
 
 }
