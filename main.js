@@ -5,12 +5,15 @@ function initGame(){
     document.getElementById("spotForBoard").appendChild(theBoard.elem);
 }
 document.addEventListener("keyup",function(event){
-    var val = event.keyCode;
-    alphabet = "abcdefghijklmnopqrstuvwxyz";
-    if(val==13){
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var val = event.key; //string val
+    if(val=="Enter"){
         theBoard.submit();
-    }else if(65<=val && val<65+26){
-        theBoard.typeIn(alphabet[val-65]);
+        document.write("you pressed space");
+    }else if(val.length==1){
+        theBoard.typeIn(val);
+    }else{
+        console.log("poop key entered");
     }
 
 });
